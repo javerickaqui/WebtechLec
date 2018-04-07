@@ -1,244 +1,495 @@
-<!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <title>WebTech 2018</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
 </head>
 
-<title> Web Systems and Technologies Topics</title>
 <body>
 
-<div id="header"><!--The header/ Menu Bar -->
+    <script>
+        var images = ["images/a.jpg",
+            "images/b.jpg",
+            "images/c.jpg"
+        ];
 
-</div>
+        var i = 0;
 
-<div id="banner"><!-- The picture below the menubar -->
+        function slides() {
+            document.getElementById("slideimage").src = images[i];
+            if (i < (images.length - 1))
+                i++;
+            else
+                i = 0;
+        }
 
-</div>
+        setInterval(slides, 2000)
+    </script>
 
-
-<div id = "topics"> <!-- The Div for all the topics that is to be put to the website -->
-  <div id = "name"><!--THE BUTTON/BANNER OF THE NAME OF THE TOPIC --> </div>
-  <div id="worldwideweb"><!--Worldwide web topic -->
-    <H1> What is the WWW? </h1>
-      <ul> <!-- list of information about WWW -->
-		<div id="Tim"> <!-- Div for the Image of Tim Berners-Lee -->
-		<img src=""> <!--ADD IMAGE HERE -->
-		</div>
-		<li> It was invented by Tim Berners-Lee in the year 1989 while he was working for Center for European Nuclear Research(CERN)
-        <li> In 1994, Tim Berners-Lee founded the World Wide Web Consortium (W3C)
-        <li> It is the system of internet servers per website that is existing in the Internet now.
-        <li> It was soon jointly developed by W3C and Internet Engineering Task Force(IETF)
-		<li> Considered as an information system for a collection of web resources.
-		<li> Two types of resources:
-		<ol>
-			<li> Static resources
-			<li> Dynamic resources
-		</ol>
-      </ul>
-
-
-
-    </div><!-- End of World Wide Web -->
-
-
-
-    <div id = "Internet">
-		<H1>Internet</H1>
-		<ul>
-      <!-- CONTINUE HERE -->
-			<li>Internet is short for internetworking. The word inter means cross boundaries and the word networking means connection.
-		</ul>
-    </div> <!-- End of Internet -->
-
-
-
-    <div id = "HTTP">
-      <div id="desc1"><!--The Division only for the HTTP Description -->
-       <h1> What is HTTP? </h1>
-       <ul>
-         <li> It stands for Hyper Text Transfer Protocol.
-         <li> It is like "blackboard" of the internet used to access or retrieve different resources that is published in the World Wide Web.
-           <!-- CAN ADD MORE HERE -->
-      </ul>
+    <div class="slideshow">
+        <hr>
+        <img src="images/a.jpg" alt="dog" id="slideimage">
     </div>
-      <h2> HTTP provides support for other functionalities just like: <!-- --></h2>
-        <ol>
-          <li> Cache Control <!-- If necessary add Div here-->
 
-          <li> Content Media Type
+    <div class="wrapper">
+        <div class="MainTopic">
+            <h1>Cascading Style Sheets</h1>
+            <div class="topic">
+                <input id="tab-one" type="radio" name="tabs2">
+                <label for="tab-one">Cascading Style Sheets (CSS)</label>
+                <div class="tab-content">
+                    <ul>
+                        <li> Language used to specify the presentation (e.q. Layout formatting, fonts, colords, etc ) of structurally marked up documents (e.q. HTML, XML, SVG, MathML, etc.). </li>
 
-          <li> Content/ Transfer
+                        <li> Developed by Hakon Wium Lie (CHSS - Cascading HTML Style Sheets v) and Bert Bos SSP. </li>
+                    </ul>
+                    <!-- start of sub topics!! -->
+                    <div class="topic sub">
+                        <input id="tab-two" type="checkbox" name="tabs">
+                        <label for="tab-two">Developers</label>
+                        <div class="tab-content">
 
-          <li> Content Negotiation
+                            <table style="width:100%">
+                                <tr>
+                                    <th> Name</th>
+                                    <th> Description</th>
+                                    <th> Image </th>
+                                </tr>
+                                <tr>
+                                    <td>Hakon Wium Lie
+                                    </td>
+                                    <td>- The Web Developer, Pioneer that was born in Halden on 1965. He is known for developing the topic of the Cascading Style Sheets or also known as the CSS.</td>
+                                    <td>
+                                        <img src="images/hakon.jpg">
+                                    </td>
+                                </tr>
+                                <p>
+                                </p>
+                                <tr>
+                                    <td>Bert Bos</td>
+                                    <td> - He is a computer scientist that was known for his contributions just like the
+                                        <b>Argo</b> web browser to test the Style Sheet he had developed alongside Hakon Wium Lie</td>
+                                    <td>
+                                        <img src="images/bert.jpg">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
 
-          <li> Client-Server Protocol Negotiations
+                    <div class="topic sub">
+                        <input id="tab-three" type="checkbox" name="tabs">
+                        <label for="tab-three">Version History</label>
+                        <div class="tab-content">
+                            <ol>
+                                <li> CSS Level 1 (CSS 1, W3C Recommendation, Dec 1996) </li>
+                                <li> CSS Level 2 (CSS 2, W3C Recommendation, May 1999) </li>
+                                <li> CSS Level 2 Revision (CSS 2.1, W3C Recommendation, June 2011)</li>
+                                <li> CSS Level 3 </li>
+                                <p> - A modular approach to CSS development (as opposed to the monolithic specification of CSS 2.1). </p>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-          <li> Persistent
+            <div class="topic">
+                <input id="tab-four" type="radio" name="tabs2">
+                <label for="tab-four">HTML Stylesheets</label>
+                <div class="tab-content">
 
-          <li> Request Pipelining
+                    <div class="topic sub">
+                        <input id="tab-twoo" type="checkbox" name="tabs">
+                        <label for="tab-twoo"> Sources of styles for HTML documents  </label>
+                        <div class="tab-content">
+                            <ul>
 
-          <li> Authentication/ Authorization
-        </ol>
-	<div id="msg">
-       <h2> HTTP Response Message</h2>
-        <ul>
-          <li> Status Codes
-		  <ul>
-			<li> 1xx
-        <d1> - Info Responses that requests from the client was understood by the server.</d1>
-				<ul>
-					<li>100 Continue
-					<li>101 Switching Protocols
-				</ul>
-			<li> 2xx
-				<ul>
-					<li>200 OK!
-					<li>201 Created
-					<li>202 Accepted
-					<li>203 Non-Authorative Information
-					<li>204 No Content
-					<li>205 Reset Content
-					<li>206 Partial Content
-				</ul>
-			<li> 3xx
-				<ul>
-					<li>300 Multiple Choices
-					<li>301 Moved Permanently
-					<li>302 Found
-					<li>303 See Other
-					<li>304 Not Modified
-					<li>305 Use Proxy
-					<li>306 Switch Proxy
-          <li>307 Temporary Redirect
-				</ul>
-			<li> 4xx
-				<ul>
-					<li>400 Bad Request
-					<li>401 Unauthorized
-					<li>402 Payment Required
-					<li>403 Forbidden
-					<li>404 Not Found
-					<li>405 Method Not Allowed
-					<li>406 Not Acceptable
-					<li>407 Proxy Authentication Required
-					<li>408 Request Timeout
-					<li>409 Conflict
-					<li>410 Gone
+                                <li> Author Styles
+                                    <ul>
+                                        <li> External (a.k.a linked) stylesheets (recommended) </li>
+                                        <li> Embedded (a.k.a. internal) stylesheets</li>
+                                        <li> Inline stylesheets</li>
+                                    </ul>
+                                </li>
 
-				</uL>
-			<li> 5xx
-				<ul>
-					<li>500 Internal Server Error
-					<li>501 Not Implemented
-					<li>502 Bad Gateway
-					<li>503 Service Unavailable
-					<li>504 Gateway Timout
-					<li>505 HTTP Version Not Supported
-				</ul>
-		  </ul>
-        </ul>
-	</div>
-	<div id="msg">
-		<H2>HTTP Request Message</H2>
+                                <p> </p>
+                                <li> User Styles
+                                    <ul>
+                                        <li> Some browsers provide (non-standard) alternatives through plugins/extensions</li>
+                                    </ul>
+                                </li>
 
+                                <p> </p>
+                                <li> User Agent Styles
+                                    <ul>
+                                        <li> Sample default usre agent stylesheet from CSS 2.1 </li>
+                                    </ul>
+                                </li>
 
-	</div>
-	<div id="header">
-		<H2>General Header Fields</H2>
-		<ul>
-		<li> Cache Control
-		<li> Connection
-		<li> Date
-		<li> Pragma
-		<li> Trailer
-		<li> Transfer Encoding
-		<li> Upgrade
-		<li> Via
-		<li> Warning
-		</ul>
+                                <p> </p>
 
-	</div>
-	<div id="header">
-		<H2>Request Header Fields</H2>
-		<ul>
-		<li> Accept
-		<li> Authorization
-		<li> Expect
-		<li> Form
-		<li> Host
-		<LI> if-Match
-		<LI> Transfer and coding
-		<li> Range
-		</ul>
-	</div>
-	<div id="header">
-		<H2>Response Header</H2>
-		<ul>
-		<li> Accept Changes
-		<li> Age Cache Control
-		<li> Location
-		<li> Etag
-		<li> Proxy-Autheticate
+                                <li> The source of a style denotes its origin, which is used in determining its precedence in the cascade </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-	</div>
-    </div><!-- End of HTTP -->
-	
-	<div id ="HTML">
-	<div id = "desc1">
-		<H1>Hypertext Markup Language (HTML)</H1>
-		<ul>
-		<li>HTML is the reason why websites have specification so it can be properly displayed by devices.
-		<li>HTML is for the content.
-		<li>CSS is for the presentation.
-		</ul>
-	</div>
-	
-	<div id="Version">
-		<h1>Versions</h1>
-		<ul>
-			<li><h3>HTML 1.0</h3>
-				<ul>
-					<li>This is the first HTML in the world. 
-					<li>There are limited resources back then.
-				</ul>
-			<li><h3>HTML 2.0</h3>
-				<ul>
-					<li>HTML 2.0 added new features but few.
-					<li>In January 1997, the website design was standardized.
-				</ul>
-			<li><h3>HTML 3.0</h3>
-				<ul>
-					<li>People were asking for more designs for their websites.
-					<li>Netscape company introduced new tags and attributes into the company.
-					<li>This is called the Netscape extension tags.
-					<li>Dave Raggett was the leader of the group.
-				</ul>
-			<li><h3>HTML 3.2</h3>
-				<ul>
-					<li>The World Wide Web Consortium (W3C) was discovered in 1994.
-				</ul>
-			<li><h3>HTML 4.01</h3>
-				<ul>
-					<li>W3C recommended the HTML 4.0 in 1997 and became the standard in April 1998.
-				</ul>
-			<li><h3>XHTML 1.0</h3>
-				<ul>
-					<li>The XHTML 1.0 specification was issued by the W3C.
-					<li>It was a joint-standard with HTML 4.01 XHTML.
-				</ul>
-			<li><h3>HTML 5</h3>
-				<ul>
-					<li>HTML 5 handled by the WHATWG
-				</ul>
-			<li><h3>HTML 5.1 (November 2016)</h3>
-			<li><h3>HTML 5.2 (December 2017)</h3>
-		</ul>
-	</div>
-	</div><!-- End of HTTP -->
-
-  </div><!-- End of Topics Division --> 
+            <div class="topic">
+                <input id="tab-five" type="radio" name="tabs2">
+                <label for="tab-five">CSS Statements</label>
+                <div class="tab-content">
 
 
+                    <!-- start of sub topics!! -->
+
+                    <div class="topic sub">
+                        <input id="tab-six" type="checkbox" name="tabs">
+                        <label for="tab-six">At-rules</label>
+                        <div class="tab-content">
+
+                            <ul>
+                                <li> @charset</li>
+                                <li> @import</li>
+                                <li> @namespace </li>
+                                <li> @media </li>
+                                <li> @supports </li>
+                                <li> @page </li>
+                                <li> @font-face </li>
+                                <li> @keyframes </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="topic sub">
+                        <input id="tab-seven" type="checkbox" name="tabs">
+                        <label for="tab-seven">CSS Rule Sets</label>
+                        <div class="tab-content">
+                            <ul>
+                                <li> Consists of a selector, followed by a brace-enclosed declaration block, which contains zero or more semi-colon (;) separated properly declaration which in turn consists of a property name followed by a colon (:) followed by a property value
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topic">
+                <input id="tab-eight" type="radio" name="tabs2">
+                <label for="tab-eight">CSS Selectors</label>
+                <div class="tab-content">
+                    <p> CSS Selectors are used for selecting the element of which you want to style or edit. </p>
+                    <!-- start of sub topics!! -->
+
+                    <div class="topic sub">
+                        <input id="tab-nine" type="checkbox" name="tabs">
+                        <label for="tab-nine">Selector</label>
+                        <div class="tab-content">
+                            <ul>
+                                <li> Structure used as a condition in a CSS rule to determine which elements in the document tree are matched by the selector and are thus targeted by the formatting specified in the CSS rule declaration block</li>
+                                <p> </p>
+
+                                <li> The matched elements are called the subjects of the selector</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="topic sub">
+                        <input id="tab-ten" type="checkbox" name="tabs">
+                        <label for="tab-ten">Selector Syntax</label>
+                        <div class="tab-content">
+                            <ul>
+                                <li> Chain of one or more sequences of simple selectors separated by combinators with one pseudo-element possible appended to the last sequence
+
+                                    <ul>
+                                        <li> Sequence of simple selectors
+                                            <ul>
+                                                <li> Chain of simple selectors not separated by combinators </li>
+                                                <li> Always starts with a type selector or a universal selector (may be implied)</li>
+                                                <li> Cannot contain other type selectors or universal selectors</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                </li>
+
+                                <p> </p>
+                                <li> Combinators are used to impose additional matching constraints, applied by prepending another sequence of selectors and the combinator to a sequence, with the subjects of the entire selector being some subset of the elements matched by the last sequence.</li>
+
+                                <p> </p>
+                                <li> Selector Group
+                                    <ul>
+                                        <li> Comma-separated list of selectors representing the union of all elements selected by each of the selectors in the list </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="topic sub">
+                        <input id="tab-eleven" type="checkbox" name="tabs">
+                        <label for="tab-eleven">Sample Selectors </label>
+                        <div class="tab-content">
+                            <ul>
+                                <li> Class selectors </li>
+                                <li> Example:
+                                    <p> </p>
+                                    <!-- EXAMPLE HERE! -->
+                                </li>
+                                <li> Attribute selectors </li>
+                                <li> //example
+                                    <P> </P>
+                                    <!-- EXAMPLE HERE! -->
+                                </li>
+                                <li> Pseudo classes </li>
+                                <li> //example
+                                    <p> </p>
+                                    <!-- EXAMPLE HERE! -->
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="topic sub">
+                        <input id="tab-twelve" type="checkbox" name="tabs">
+                        <label for="tab-twelve">Combinators</label>
+                        <div class="tab-content">
+                            <ul>
+                                <li> Combinators
+                                    <ul>
+                                        <li> Descendants combinator (whitespace, space, tab, line feed, carriage return, from feed) </li>
+                                        <li> Child combinator (>) </li>
+                                        <li> Sibling combinator
+                                            <ul>
+                                                <li> Adjacent Sibling Combinator (+) </li>
+                                                <li> General Sibling Combinator (~) </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="topic sub">
+                        <input id="tab-thirteen" type="checkbox" name="tabs">
+                        <label for="tab-thirteen">Pseudo-elements </label>
+                        <div class="tab-content">
+                            <p> The CSS Pseudo-Element is used to identify, edit and alter specified portions of an element</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topic">
+                <input id="tab-fourteen" type="radio" name="tabs2">
+                <label for="tab-fourteen">CSS Rule Precedence</label>
+                <div class="tab-content">
+                    <ul>
+                        <li> An HTML element may be the subject of the selectors of multiple style rules
+                            <ul>
+                                <li> When such rules target different properties, their effects cascade (i.e. are combined)</li>
+                                <p> </p>
+                                <li> When the styles involve the same property, they conflict and must be resolved such that only one style is applied
+                                    <ul>
+                                        <li>Resolution:
+                                            <ul>
+                                                <li>§ By origin and importance
+                                                </li>
+                                                <li>§ By specificity
+                                                </li>
+                                                <li>§ By order
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                            </ul>
+
+                        </li>
+
+
+                    </ul>
+
+
+
+                    <!-- start of subtopics!! -->
+                    <div class="topic sub">
+                        <input id="tab-fifteen" type="checkbox" name="tabs">
+                        <label for="tab-fifteen">Origin and Importance</label>
+                        <div class="tab-content">
+                            <p> The origin of a declaration is based on where it comes from and its importance is whether or not is declared “important” (see below). The precedence of the various origins is in descending order.</p>
+
+                            <ol>
+                                <li> Transition declarations [CSS3-TRANSITIONS] </li>
+                                <li> Important user agent declarations </li>
+                                <li> Important user declarations </li>
+                                <li> Important override declarations [DOM-LEVEL-2-STYLE] </li>
+                                <li> Important author declarations </li>
+                                <li> Animation declarations [CSS3-ANIMATIONS] </li>
+                                <li> Normal override declarations [DOM-LEVEL-2-STYLE] </li>
+                                <li> Normal author declarations </li>
+                                <li> Normal user declarations </li>
+                                <li> Normal user agent declarations </li>
+
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="topic">
+                <input id="tab-sixteen" type="radio" name="tabs2">
+                <label for="tab-sixteen">CSS Declarations</label>
+                <div class="tab-content">
+                    <!-- start of subtopics!! -->
+
+
+
+                    <div class="topic sub">
+                        <input id="tab-seventeen" type="checkbox" name="tabs">
+                        <label for="tab-seventeen">Properties</label>
+                        <div class="tab-content">
+
+                            <ul>
+                                <li> Properties
+                                    <ul>
+                                        <li> Shorthand properties
+                                            <ul>
+                                                <li> Allows authors to specify the values of several properties with a single property. </li>
+                                            </ul>
+                                        </li>
+
+
+                                    </ul>
+
+                                </li>
+                                <p> </p>
+
+                                <li> E.g. background, font, margin, padding, border, border – left, border – width, etc.
+                                    <ul>
+                                        <li> Vendor specific extensions (a.k.a., vendor prefixes)
+                                            <ul>
+                                                <li> Used by browser vendors as a prefix for the names of experimental or non-standard CSS properties; lately; vendors are moving away from vendor prefixes in favor of user-controlled flags or preferences</li>
+                                            </ul>
+                                        </li>
+                                        <p> </p>
+                                    </ul>
+                                </li>
+                                <li> E.g. -webkit- , -moz- , -o-, -ms- , etc.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="topic sub">
+                        <input id="tab-eighteen" type="checkbox" name="tabs">
+                        <label for="tab-eighteen">Custom properties. A.k.a., CSS variables (experimental)</label>
+                        <div class="tab-content">
+                            <p> Custom properties. A.k.a., CSS variables (experimental) </p>
+                            <ul>
+                                <li>Property names prefixed with - - , representing a value that can be reused throughout the document using the var() function
+                                </li>
+
+                                <p> </p>
+
+                                <li>Values
+                                </li>
+
+                                <p> </p>
+
+                                <li> Value processing
+                                    <ul>
+                                        <li> Declared, Cascaded, Specified, Corrupted, Used </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of CSS topics!! -->
+        <div class="MainTopic">
+            <h1>JavaScript</h1>
+            <div class="topic">
+                <input id="tab-nineteen" type="radio" name="tabs2">
+                <label for="tab-nineteen">History</label>
+                <div class="tab-content">
+                  <p>In the year of 1996, JavaScript was released.
+                    JavaScript is a language which was design by Brendan Eich that enable a user to interact with the page.
+                  Through the development of JavaScript, it was known as the Netscape Mocha then LiveWire and then LiveScript.
+                  JavaScript’s syntax is closely the same with Java’s syntax.</p>
+                </div>
+            </div>
+
+            <div class="topic">
+                <input id="tab-twenty" type="radio" name="tabs2">
+                <label for="tab-twenty">Location of Scripts</label>
+                <div class="tab-content">
+                    <p>Scripts can be located in the HEAD section or in the BODY section.
+                      In the head section, it is required to put the type, source and external JavaScript file.
+                      The page will access from top to bottom.
+                      The script will execute if the html and css are rendered.
+                      In the body section, the script will execute as the html and css are rendered.
+                    </p>
+                </div>
+            </div>
+
+            <div class="topic">
+                <input id="tab-twentyone" type="radio" name="tabs2">
+                <label for="tab-twentyone">APIs</label>
+                <div class="tab-content">
+                    <p>APIs allows to access a certain object within a web application so that you can manipulate objects in the environment.
+                      It is an information about the different elements.
+                      Elements can be manipulated so that it can provide a behavior whenever the user interacts with the page. </p>
+                </div>
+            </div>
+
+            <div class="topic">
+                <input id="tab-twentytwo" type="radio" name="tabs2">
+                <label for="tab-twentytwo">Document Object Model (DOM)</label>
+                <div class="tab-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+
+                    <div class="topic sub">
+                        <input id="tab-twentythree" type="checkbox" name="tabs">
+                        <label for="tab-twentythree">DOM Data Types</label>
+                        <div class="tab-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                        </div>
+                    </div>
+                    <div class="topic sub">
+                        <input id="tab-twentyfour" type="checkbox" name="tabs">
+                        <label for="tab-twentyfour">DOM Events</label>
+                        <div class="tab-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                        </div>
+                    </div>
+                    <div class="topic sub">
+                        <input id="tab-twentyfive" type="checkbox" name="tabs">
+                        <label for="tab-twentyfive">DOM Event Listener</label>
+                        <div class="tab-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of JScript topics!! -->
+    </div>
+    <footer> <center> ©Copyright Group 2 9364A 11:00 - 12:00 WS </center> </footer>
 </body>
+
 </html>
